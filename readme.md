@@ -34,7 +34,7 @@ Follow these steps to get the application up and running using Docker Compose:
    Once the containers are up and running, you can access the application in your web browser at:
 
    ```
-   http://localhost:3000
+   http://localhost:81
    ```
 
    The backend API will be available at:

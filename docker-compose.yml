@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: ./backend
+      dockerfile: dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+  
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: dockerfile
+    ports:
+      - "81:80"
+    volumes:
+      - ./frontend:/app
+
+
+
+
+    

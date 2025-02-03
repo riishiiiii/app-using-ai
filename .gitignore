@@ -114,11 +114,4 @@ dmypy.json
 cython_debug/
 
 # FastAPI
-data/users.json
-
-# Docker
-docker-compose.yml
-Dockerfile
-
-blogs.json
-users.json
+data

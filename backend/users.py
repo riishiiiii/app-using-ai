@@ -2,6 +2,7 @@
 from fastapi import APIRouter, HTTPException
 import json
 from pydantic import BaseModel
+import os 
 
 router = APIRouter()
 
@@ -46,6 +47,8 @@ async def register_user(user: User):
     user_data["password"] = get_password_hash(user.password)
     user_data["user_id"] = str(uuid.uuid4())
     try:
+        if os.path.exists("data/users.json") == False:
+            os.mkdir("data")
         with open("data/users.json", "r+") as file:
             users = json.load(file)
             if user.username in users:

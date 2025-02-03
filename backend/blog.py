@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException
 import json
 from pydantic import BaseModel
 import uuid
+import os
 
 router = APIRouter()
 
@@ -19,6 +20,8 @@ async def write_blog(blog: Blog):
     blog_data = blog.dict()
     blog_data["id"] = str(uuid.uuid4())
     try:
+        if os.path.exists("data") == False:
+            os.mkdir("data")
         with open("data/blogs.json", "r+") as file:
             blogs = json.load(file)
             blogs.append(blog_data)
