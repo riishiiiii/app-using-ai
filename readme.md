@@ -17,8 +17,8 @@ Follow these steps to get the application up and running using Docker Compose:
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your-username/rishi-ki-app.git
-   cd rishi-ki-app
+   git clone https://github.com/riishiiiii/app-using-ai.git
+   cd app-using-ai
    ```
 
 2. **Build and run the Docker containers:**
